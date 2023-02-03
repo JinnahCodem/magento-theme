@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!--    Copyright (c) 2022 ReCodem Pvt Ltd All rights reserved-->
+
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <css src="https://use.fontawesome.com/releases/v5.2.0/css/all.css" src_type="url"/>
+    </head>
+    <body>
+        <referenceContainer name="header.panel" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <move element="minicart" destination="catalog.topnav" as="mini_cart_nav" />
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="social_icons">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">custom_social_icons</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

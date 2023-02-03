@@ -1,0 +1,31 @@
+
+<?php
+/**
+ * @var Categorylist $block
+ */
+
+use Codem\CategorySide\Block\Categorylist;
+
+$categoryId = $block->getEnableCategory();
+$category = $block->getRootSubCategory($categoryId);
+
+?>
+
+<div class="block category-sidebar">
+    <div class="category-sidebar-heading">
+        <h2>CATEGORIES</h2>
+    </div>
+    <?php foreach ($category as $categorydata) : ?>
+        <?php
+        $categoryid = $categorydata->getEntityId();
+        $categoryFactory = $block->getCategoryName($categoryid);
+        $categoryNameshow = $categoryFactory->getName();
+        $categoryUrlShow = $categoryFactory->getUrl();
+        ?>
+        <div class="category-name">
+            <a class="category-link-show" href="<?= $categoryUrlShow; ?>" alt="<?= $categoryNameshow; ?>"
+               title="<?= $categoryNameshow; ?>"><?= $categoryNameshow; ?>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
