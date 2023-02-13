@@ -1,0 +1,198 @@
+@media screen and (min-width: 1024px) and (max-width:1170px) {
+
+    //Custom header
+    .block-static-block .custom-header {
+        display: flex;
+        justify-content: start;
+        font-size: 10px;
+        font-weight: 500;
+        gap: 100px;
+    }
+
+    //Search
+
+    .page-header .header.content{
+        display: flex;
+    }
+    .block.block-search{
+        width: 260px;
+        margin-right: inherit;
+    }
+
+    //Navigation Section
+    .nav-sections-item-content .navigation .level0{
+        margin: 0;
+    }
+
+
+
+}
+
+//Styles for the device with the max width 1024px
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+
+    //Custom header
+
+    .widget.block.block-static-block.widget{
+        margin-bottom : 36px;
+    }
+
+    .block-static-block .custom-header {
+        display: block;
+        text-align: center;
+    }
+    .block-static-block .custom-header-list1, .block-static-block .custom-header-list2, .block-static-block .custom-header-list3{
+        padding: 4px 2px;
+        border-bottom: 1px solid #eee;
+    }
+    .block-static-block .custom-header-list3{
+        border-bottom: none;
+    }
+
+    //Search
+
+    .block.block-search{
+        width: 260px;
+        margin-right: inherit;
+    }
+
+    //Social icons
+    .header .custom-social-icons {
+        position: absolute;
+        right: 20px;
+        top: -12px;
+    }
+
+    //Navigation
+
+    .nav-sections-item-content .navigation .level0{
+        margin: 0;
+    }
+
+    //Product List
+
+    .product.details .product-details{
+        display: block;
+    }
+
+    .product.details .product-cart-button {
+        margin: 0;
+        padding: 10px 10px 0 0;
+    }
+
+    //Footer
+
+    .footer-menu .footer-menu-right-top{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-menu  .block.newsletter {
+        max-width: inherit;
+    }
+
+    .footer-menu .footer-menu-right-bottom {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        row-gap: 20px;
+    }
+
+    .footer-menu address.footer-menu-right-bottom-storeinfo {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}
+
+
+//Styles for the device with the max width 768px
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    //Custom Static block
+
+    .block-static-block .custom-header {
+        display: block;
+        text-align: center;
+        font-size: 10px;
+    }
+    .block-static-block .custom-header-list1, .block-static-block .custom-header-list2, .block-static-block .custom-header-list3{
+        padding: 4px 2px;
+        border-bottom: 1px solid #eee;
+    }
+    .block-static-block .custom-header-list3{
+        border-bottom: none;
+    }
+
+    //Search
+
+    .block.block-search{
+        width: inherit;
+        margin-right: inherit;
+    }
+
+    //Social Media Icons
+    .header .custom-social-icons {
+        position: absolute;
+        right: 5px;
+        top: -10px;
+    }
+
+    .catalog-category-view .custom-social-icons ul li i::before {
+        font-size: 14px;
+    }
+
+    //Product List
+
+    .product.details .product-details {
+        display: block;
+    }
+
+    .product.details .product-cart-button {
+        margin: 0;
+        padding: 10px 10px 0 0;
+    }
+
+    //Custom blog post
+    .blog-post .post-content{
+        display: block;
+        text-align: center;
+    }
+
+    .blog-post .post-content1, .blog-post .post-content2, .blog-post .post-content3{
+        padding: 4px;
+    }
+
+    .a.product-item-link{
+        font-size: 15px;
+    }
+
+    // Custom Footer
+
+    .footer.content .footer-menu {
+        display: block;
+    }
+
+    .footer.content p.footer-menu-left-description {
+        text-align: center;
+    }
+
+    .footer.content .footer-menu-left{
+        margin-bottom: 32px;
+    }
+
+    .footer.content .footer-menu-right-top-label h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer.content .footer-menu-right-top {
+        display: block;
+    }
+
+    .footer.content .footer-menu-right-bottom {
+        display: block;
+    }
+
+}
