@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!--    Copyright (c) 2022 ReCodem Pvt Ltd All rights reserved-->
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <move element="product.info.review" destination="product.info.price" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <move element="product.info.sku" destination="product.info.extrahint" after="product.info.social"/>
+
+        <block name="tags.share" template="Magento_Catalog::product/customtags.phtml" />
+        <move element="tags.share" destination="product.info.extrahint" after="product.info.sku" />
+
+
+    </body>
+</page>

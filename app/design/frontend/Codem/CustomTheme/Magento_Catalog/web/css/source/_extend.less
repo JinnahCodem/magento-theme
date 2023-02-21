@@ -1,0 +1,337 @@
+//Desktop Styles
+.column.main .product-info-main {
+    //Aligning Price, Review and SKU
+    .product-info-price{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        border-bottom: unset;
+        margin-bottom: unset;
+        .price-box.price-final-price{
+            order: 1;
+        }
+    }
+    .product-info-stock-sku {
+        padding-left: 0;
+        text-align: inherit;
+        order: 3;
+    }
+
+    //Aligning Wish List Icon
+
+    .product-social-links {
+        margin-top: -82px;
+        margin-left: 224px;
+
+        a.action.towishlist{
+            border: 1px solid #787272;
+            padding: 4px 8px;
+            color: #000;
+
+            &::before{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.product.media{
+    margin-bottom: 0;
+}
+
+.custom-review-label span, .stock-label {
+    font-weight: 700;
+    text-transform: unset;
+    margin-bottom: 10px;
+}
+.stock.available span{
+    font-weight: 400;
+    text-transform: unset;
+}
+
+//Quantity and Add to cart
+
+.product-add-form .box-tocart {
+    .fieldset {
+        display: flex;
+        gap: 16px;
+    }
+    .action.tocart{
+        width: 100%;
+        padding: 4px 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+//Accordian
+
+.product.info.detailed{
+    .product.data.items{
+        .item.title{
+            width: 100%;
+            clear: both;
+            a.data.switch{
+                background: #e7e8ec;
+                text-transform: uppercase;
+                font-weight: 700;
+                color: #000;
+                font-size: 16px;
+                letter-spacing: 0.5px
+            }
+        }
+        #description,
+        #additional,
+        #reviews{
+            background: #f7f7f7;
+            position: relative;
+            &:after{
+                content: '-';
+                position: absolute;
+                top: -46px;
+                right: 24px;
+                font-size: 36px;
+                z-index: 1000;
+            }
+        }
+    }
+}
+
+//Review
+
+div#reviews{
+    display: flex;
+    justify-content: start;
+    padding: 30px 0;
+    margin: 0;
+    gap: 50px;
+    #product-review-container,
+    .block.review-add{
+        width: 50%;
+    }
+}
+
+
+li.item.review-item {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    row-gap: 20px;
+    .rating-summary.item {
+        float: right;
+        .rating-label{
+            display: none;
+        }
+    }
+    .review-content-container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+
+//Related Products
+.upsells-block-container {
+    .block {
+        .title{
+            display: block;
+            text-transform: uppercase;
+            margin: 40px 0;
+            strong{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.slick-slide {
+    .product.details.product-item-details {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        row-gap: 15px;
+        .product-item-name {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .product-item-actions {
+            margin: unset;
+        }
+
+    }
+}
+
+//Slider Button
+
+.block-content.content {
+    position: relative;
+    .button-container {
+        position: absolute;
+        top: -50px;
+        right: 7px;
+        .prev-slide.slick-arrow {
+            padding: 5px 7px;
+            border-radius: 50%;
+            background: none;
+            border: 1px solid #000;
+            &:after {
+                content: "\f104";
+                font-family: "Font Awesome 5 Free";
+                font-size: 21px;
+            }
+        }
+        .next-slide.slick-arrow {
+            padding: 5px 7px;
+            border-radius: 50%;
+            background: none;
+            border: 1px solid #000;
+            &:after {
+                content: "\f105";
+                font-family: "Font Awesome 5 Free";
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+//Product Description
+.product-info-main {
+    .price-container {
+        span.price{
+            color: #f31111cf;
+            font-weight: 400 !important;
+            font-size: 30px !important;
+        }
+    }
+    button#product-addtocart-button {
+        background: #000;
+        border: none;
+        border-radius: 0;
+        &:hover{
+            background: #f31111cf;
+        }
+    }
+}
+
+//Tags and social icons
+
+.share-icons {
+    display: flex;
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        width: 150px;
+        padding: 0 10px;
+    }
+}
+
+//SKU
+
+.product.attribute.sku {
+    margin: 30px 0 10px 0;
+}
+
+
+//Airpod Styles
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .product-item-info {
+        width: 100% !important;
+        .product-image-container{
+            span.product-image-wrapper {
+                padding-bottom: 60% !important;
+            }
+        }
+        .product-item-name {
+            width: 100% !important;
+            text-align: center;
+        }
+    }
+    span.product-image-container {
+        width: 100% !important;
+    }
+    .price-box.price-final_price,
+    .product.actions.product-item-actions{
+        text-align: center;
+    }
+
+    .review-ratings {
+        min-width: inherit;
+    }
+    .block.review-add {
+        padding: 0 20px;
+    }
+}
+
+
+
+//Mobile styles
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    ////Aligning Price, Review and SKU
+    .columns {
+        .column.main {
+            .product-info-main {
+                .product-info-price{
+                    flex-direction: unset;
+                    justify-content: space-evenly;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .product-add-form {
+        .box-tocart .fieldset {
+            gap: 25px;
+            padding-left: 33px;
+        }
+
+    }
+
+    //Accordian Title
+    #description,
+    #additional,
+    #reviews{
+        &:after{
+            content: '' !important;
+        }
+    }
+
+    //Review Container
+    .product.data.items{
+        div#reviews {
+            display: revert;
+            padding: 30px 20px;
+            margin: 0;
+            #product-review-container,
+            .block.review-add {
+                width: inherit;
+            }
+        }
+    }
+
+
+    .product-item-info {
+        width: 100% !important;
+        .product-image-container{
+            span.product-image-wrapper {
+                padding-bottom: 60% !important;
+            }
+        }
+        .product-item-name {
+            width: 100% !important;
+            text-align: center;
+        }
+    }
+    span.product-image-container {
+        width: 100% !important;
+    }
+    .price-box.price-final_price,
+    .product.actions.product-item-actions{
+        text-align: center;
+    }
+}
+
+
+

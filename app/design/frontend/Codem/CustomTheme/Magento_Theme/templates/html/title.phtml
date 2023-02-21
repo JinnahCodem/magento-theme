@@ -23,6 +23,8 @@ if (trim($block->getPageHeading())) {
         <?= /* @noEscape */ $titleHtml ?>
     </h1>
     <?= $block->getChildHtml() ?>
+    <?php if ($block->getRequest()->getFullActionName() === 'checkout_cart_index') :?>
     <a class="return-link" href="#"><i class="fas fa-angle-left"></i>Return to shop</a>
+    <?php endif; ?>
 </div>
 <?php endif; ?>

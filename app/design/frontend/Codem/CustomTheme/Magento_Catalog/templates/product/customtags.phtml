@@ -1,0 +1,31 @@
+<?php
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');
+$categories = $product->getCategoryIds(); /*will return category ids array*/
+
+foreach ($categories as $category) {
+    $cat = $objectManager->create('Magento\Catalog\Model\Category')->load($category);
+    $categoyList[] = $cat->getName();
+}
+?>
+
+<div class="categories">
+    <p>Tags : <span>
+            <?=  implode(", ", $categoyList);
+            ?>
+        </span></p>
+</div>
+
+<div class="share-icons">
+    <p>Social share : </p>
+    <ul>
+        <li><i class="fab fa-facebook"></i></li>
+        <li><i class="fab fa-twitter"></i></li>
+        <li><i class="fab fa-google-plus-g"></i></li>
+        <li><i class="fas fa-rss"></i></li>
+        <li><i class="fab fa-linkedin"></i></li>
+    </ul>
+</div>
+
+
