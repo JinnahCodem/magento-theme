@@ -1,0 +1,17 @@
+.opc-payment .payment-group .actions-toolbar .checkout{
+    display: none;
+}
+
+div#place-order-trigger-wrapper {
+    text-align: center;
+}
+
+div#place-order-trigger-wrapper button#place-order-trigger {
+    background: black;
+    border-radius: 0;
+}
+
+div#place-order-trigger-wrapper button#place-order-trigger:hover{
+     background: red;
+     border: none;
+ }

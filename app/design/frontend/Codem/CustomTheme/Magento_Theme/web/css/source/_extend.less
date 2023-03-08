@@ -110,8 +110,21 @@ input:not([disabled]):focus {
     display: inline-block;
     position: relative;
     float: none;
+    &:hover{
+        background: #ff4201cc;
+    }
     .action.showcart {
         display: inline-block;
+        &:hover{
+            &:before{
+                color: #fff;
+            }
+        }
+        &:active{
+            &:before{
+                color: #fff;
+            }
+        }
         &:before {
             color: #FFFFFF;
             font-size: 22px;
@@ -131,6 +144,48 @@ input:not([disabled]):focus {
         }
         .counter-number {
             text-shadow: none;
+        }
+    }
+    .block.block-minicart.ui-dialog-content.ui-widget-content{
+        #minicart-content-wrapper{
+            .block-content{
+                .action.primary.checkout{
+                    background: #f10d33;
+                    border: 1px solid #f10d33;
+                    &:hover {
+                        background: rgba(241, 13, 51, 0.62);
+                    }
+                }
+                .actions{
+                    .action.viewcart{
+                        border-bottom: 1px solid #000;
+                        span{
+                            color: #000;
+                        }
+                        &:hover{
+                            border-bottom: none;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .minicart-items-wrapper{
+                    .minicart-items{
+                        .product-item {
+                            strong.product-item-name {
+                                a{
+                                    color: #000;
+                                    border-bottom: 1px solid #000;
+                                    font-weight: 600;
+                                    &:hover{
+                                        text-decoration: none;
+                                        border-bottom: none;
+                                    }
+                                }
+                                }
+                            }
+                    }
+                }
+            }
         }
     }
 }
@@ -266,6 +321,7 @@ button.action.tocart.primary {
         }
     }
 }
+
 
 //Custom Footer
 
@@ -538,13 +594,15 @@ button.action.tocart.primary {
         .blog-heading h1{
             text-align: center;
         }
-        .post-content{
-            display: block;
-            text-align: center;
-            .post-content1,
-            .post-content2,
-            .post-content3{
-                padding: 4px;
+        div{
+            .post-content{
+                display: block !important;
+                text-align: center !important;
+                .post-content1,
+                .post-content2,
+                .post-content3{
+                    padding: 4px;
+                }
             }
         }
     }
