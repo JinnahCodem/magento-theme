@@ -113,8 +113,8 @@ Block -> Custom Blog Post
 Follow below settings,
 
 Enable Block -> Yes,
-Block Title -> Custom Blog Post,
-Identifier -> custom_blog_post,
+Block Title -> Custom Social Icons,
+Identifier -> custom_social_icons,
 Store View -> All Store Views
 
 #### Edit with Page Builder (HTML Code)
@@ -138,8 +138,8 @@ Store View -> All Store Views
 Follow below settings,
 
 Enable Block -> Yes,
-Block Title -> Custom Social Icons,
-Identifier -> custom_social_icons,
+Block Title -> Custom Footer,
+Identifier -> custom_footer,
 Store View -> All Store Views
 
 #### Edit with Page Builder (HTML Code)
