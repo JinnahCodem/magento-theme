@@ -346,8 +346,6 @@ return [
         'Magento_WishlistSampleData' => 1,
         'Codem_CategorySide' => 1,
         'Codem_Placeorder' => 1,
-        'MSP_Common' => 1,
-        'MSP_DevTools' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1

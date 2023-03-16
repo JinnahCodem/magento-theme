@@ -2,6 +2,21 @@
     display: none;
 }
 
+@media screen and (max-width: 767px) {
+    .opc-payment .payment-group .actions-toolbar .checkout{
+        display: unset;
+    }
+
+    button.action.primary{
+        background-color: #f10d33;
+        border: none;
+    }
+
+    button.action.primary:hover{
+        background-color: #ff0101;
+    }
+}
+
 div#place-order-trigger-wrapper {
     text-align: center;
 }
