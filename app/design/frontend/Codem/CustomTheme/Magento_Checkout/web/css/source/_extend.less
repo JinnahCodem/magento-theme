@@ -493,6 +493,7 @@ button.button.action.continue.primary {
             .cart-summary{
                 margin: 0;
                 width: inherit;
+                order: 2;
             }
         }
     }
@@ -512,11 +513,11 @@ button.button.action.continue.primary {
         }
     }
 
-
     //Cart table
     .cart.table-wrapper {
         .cart {
             thead {
+                background: none;
                 tr {
                     th.col {
                         border-bottom: none;
@@ -535,11 +536,14 @@ button.button.action.continue.primary {
             margin-top: 0;
             margin-left: 40px;
         }
+        .actions-toolbar > .action-delete {
+            top: -14px !important;
+        }
     }
 
     .cart.items.data.table {
         thead{
-            background: none;
+            background: none !important;
         }
     }
 
@@ -563,9 +567,16 @@ button.button.action.continue.primary {
 
     /****Payment Page****/
 
-    .minicart-wrapper {
-        clear: unset !important;
-        float: right !important;
+    .checkout-index-index{
+        .minicart-wrapper {
+            clear: unset !important;
+            float: right !important;
+        }
+    }
+
+    .field.field-select-billing,
+    fieldset.fieldset.address {
+        padding-right: 0 !important;
     }
 
     /**** Success Page *****/
